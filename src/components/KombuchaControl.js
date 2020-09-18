@@ -56,7 +56,7 @@ class KombuchaControl extends React.Component {
     dispatch(action);
     this.setState({
       editing: false,
-      selectedTicket: null
+      selectedKombucha: null
     });
   }
 
@@ -86,19 +86,28 @@ class KombuchaControl extends React.Component {
     this.setState({selectedKombucha: null});
   }
   
-  handleKombuchaPurchaseClick = (id) => {
-    const purchaseKombucha = this.state.masterKombuchaList.filter(kombucha => kombucha.id === id)[0];
-    if (purchaseKombucha.quantity !== 0) {
-      purchaseKombucha.quantity--;
+  handleKombuchaPurchaseClick = (purchaseKombucha) => {
+    const { dispatch } = this.props;
+    const { id, name, brand, price, flavor, quanity } = purchaseKombucha;
+    const action = {
+      type: 'ADD_KOMBUCHA',
+      name: name,
+      brand: brand,
+      price: price,
+      flavor: flavor,
+      quanity: quanity,
+      id: id
     }
-    const editedKombuchaList = this.state.masterKombuchaList
-      .filter(kombucha => kombucha.id !== id)
-      .concat(purchaseKombucha);
-    this.setState({
-      masterKombuchaList: editedKombuchaList,
-      editing: false,
-      selectedKombucha: null
-    });
+    const selectedKombucha = this.props.masterKombuchaList[id];
+    if (selectedKombucha.quantity !== 0) {
+      selectedKombucha.quantity--;
+    }
+    dispatch(action);
+      this.setState({
+        purchaseKombucha: purchaseKombucha,
+        editing: false,
+        selectedKombucha: null
+      });
   }
 
   render() {     
