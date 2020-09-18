@@ -1,13 +1,13 @@
 # 
 
-# <h1 align = "center"> Kombucha Girl
+# <h1 align = "center"> Kombucha Girl Redux
 
 <div align="center">
 
 ![Preview](preview.png)
 </div>
 
-##### <h4 align = "center">  React Fundamentals, Indepedent Project for Epicodus, 09.11.2020
+##### <h4 align = "center">  RReact with Redux, Indepedent Project for Epicodus, 09.18.2020
 
 #### <h4 align = "center"> By _**Christine Augustine**_
 
