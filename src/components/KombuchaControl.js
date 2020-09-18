@@ -4,6 +4,7 @@ import KombuchaList from './KombuchaList';
 import KombuchaDetails from './KombuchaDetails';
 import EditKombuchaForm from './EditKombuchaForm';
 import Button from 'react-bootstrap/Button';
+import { connect } from 'react-redux';
 
 
 class KombuchaControl extends React.Component {
@@ -107,5 +108,9 @@ class KombuchaControl extends React.Component {
     );
   }
 }
+
+TicketControl = connect()(TicketControl);
+
+export default TicketControl;
 
 export default KombuchaControl;
