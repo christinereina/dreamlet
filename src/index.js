@@ -6,11 +6,12 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import reducer from './reducers/ticket-list-reducer';
 const store = createStore(reducer);
+import { Provider } from 'react-redux';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
