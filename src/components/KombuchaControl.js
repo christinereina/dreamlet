@@ -37,13 +37,13 @@ class KombuchaControl extends React.Component {
   }
 
   handleChangingSelectedKombucha = (id) => {
-    const selectedKombucha = this.state.masterKombuchaList.filter(kombucha => kombucha.id === id)[0];
+    const selectedKombucha = this.props.masterKombuchaList[id];
     this.setState({selectedKombucha: selectedKombucha});
   }
 
   handleEditingKombucha = (kombuchaToEdit) => {
     const { dispatch } = this.props;
-    const { id, name, brand, price, flavor, quanity, id} = kombuchaToEdit;
+    const { id, name, brand, price, flavor, quanity } = kombuchaToEdit;
     const action = {
       type: 'ADD_KOMBUCHA',
       name: name,
@@ -115,7 +115,7 @@ class KombuchaControl extends React.Component {
       currentlyVisibleState = <NewKombuchaForm onNewKombuchaCreation={this.handleAddNewKombuchaToList} />;
       buttonText = "go back";
     } else {
-      currentlyVisibleState = <KombuchaList kombuchaList={this.state.masterKombuchaList} onKombuchaSelection={this.handleChangingSelectedKombucha} />;
+      currentlyVisibleState = <KombuchaList kombuchaList={this.props.masterKombuchaList} onKombuchaSelection={this.handleChangingSelectedKombucha} />;
       buttonText = "add kombucha";
     }
     return (

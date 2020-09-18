@@ -12,8 +12,8 @@ function KombuchaList(props){
     <Container>
     <Row>
       <Col xs={{ order: 'first' }}>
-          {props.kombuchaList.map((kombucha) =>
-            <Kombucha
+          {Object.values(props.kombuchaList).map((kombucha) => {
+            return <Kombucha
               whenKombuchaClicked = { props.onKombuchaSelection }
               name={kombucha.name}
               brand={kombucha.brand}
@@ -22,7 +22,7 @@ function KombuchaList(props){
               quantity={kombucha.quantity}
               id={kombucha.id}
               key={kombucha.id}/>
-            )}
+          })}
         </Col>  
       </Row>
     </Container> 
@@ -31,7 +31,7 @@ function KombuchaList(props){
 }
 
  KombuchaList.propTypes = {
-    kombuchaList: PropTypes.array,
+    kombuchaList: PropTypes.object,
     onKombuchaSelection: PropTypes.func
   };
 
