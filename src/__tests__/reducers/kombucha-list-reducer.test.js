@@ -3,13 +3,19 @@ import kombuchaListReducer from '../../reducers/kombucha-list-reducer';
 describe('kombuchaListReducer', () => {
 
   let action;
-  const kombuchaData = {
-    name: 'The Keanu',
+  const currentState = {
+   1: {name: 'The Keanu',
     brand: 'Dr. Christine',
     price: '$8.99',
     flavor: 'Honey Peach',
     quanity: '100',
-    id: 1
+    id: 1},
+    2: {name: 'The Sam Rockwell',
+    brand: 'Dr. Christine',
+    price: '$10.99',
+    flavor: 'Cucumber Melon',
+    quanity: '100',
+    id: 2}
   };
 
   test('Should return default state if there is no action type passed into the reducer', () => {
@@ -17,7 +23,7 @@ describe('kombuchaListReducer', () => {
   });
 
 test('Should successfully add new kombucha to masterKombuchaList', () => {
-  const { name, brand, price, flavor, quanity, id } = kombuchaData;
+  const { name, brand, price, flavor, quanity, id } = currentState;
   action = {
     type: 'ADD_KOMBUCHA',
     name: name,
@@ -38,5 +44,21 @@ test('Should successfully add new kombucha to masterKombuchaList', () => {
       id: id,
     }
   });
+}); 
+
+test('Should delete a kombucha', () => {
+  action = {
+    type: 'DELETE_KOMBUCHA',
+    id: 1
+  };
+  expect(kombuchaListReducer(currentState, action)).toEqual({
+    2: {name: 'The Sam Rockwell',
+    brand: 'Dr. Christine',
+    price: '$10.99',
+    flavor: 'Cucumber Melon',
+    quanity: '100',
+    id: 2}
+  });
 });
+  
 });
