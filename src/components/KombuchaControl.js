@@ -13,7 +13,6 @@ class KombuchaControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      masterKombuchaList: [],
       selectedKombucha: null,
       editing: false
     };
@@ -43,31 +42,50 @@ class KombuchaControl extends React.Component {
   }
 
   handleEditingKombucha = (kombuchaToEdit) => {
-    const editedmasterKombuchaList = this.state.masterKombuchaList
-      .filter(kombucha => kombucha.id !== this.state.selectedKombucha.id)
-      .concat(kombuchaToEdit);
+    const { dispatch } = this.props;
+    const { id, name, brand, price, flavor, quanity, id} = kombuchaToEdit;
+    const action = {
+      type: 'ADD_KOMBUCHA',
+      name: name,
+      brand: brand,
+      price: price,
+      flavor: flavor,
+      quanity: quanity,
+      id: id
+    }
+    dispatch(action);
     this.setState({
-      masterKombuchaList: editedmasterKombuchaList,
       editing: false,
-      selectedKombucha: null
+      selectedTicket: null
     });
   }
 
   handleAddNewKombuchaToList = (newKombucha) => {
-    const newMasterKombuchaList = this.state.masterKombuchaList.concat(newKombucha);
-    this.setState({
-      masterKombuchaList: newMasterKombuchaList,
-      formVisibleOnPage: false });
+    const { dispatch } = this.props;
+    const { name, brand, price, flavor, quanity, id  } = newKombucha;
+    const action = {
+      type: 'ADD_KOMBUCHA',
+      name: name,
+      brand: brand,
+      price: price,
+      flavor: flavor,
+      quanity: quanity,
+      id: id
+    }
+    dispatch(action);
+    this.setState({formVisibleOnPage: false});
   }
 
   handleDeletingKombucha = (id) => {
-    const newMasterKombuchaList = this.state.masterKombuchaList.filter(kombucha => kombucha.id !== id);
-    this.setState({
-      masterKombuchaList: newMasterKombuchaList,
-      selectedKombucha: null
-    });
+    const { dispatch } = this.props;
+    const action = {
+      type: 'DELETE_KOMBUCHA',
+      id: id
+    }
+    dispatch(action);
+    this.setState({selectedKombucha: null});
   }
-
+  
   handleKombuchaPurchaseClick = (id) => {
     const purchaseKombucha = this.state.masterKombuchaList.filter(kombucha => kombucha.id === id)[0];
     if (purchaseKombucha.quantity !== 0) {
@@ -109,8 +127,11 @@ class KombuchaControl extends React.Component {
   }
 }
 
-TicketControl = connect()(TicketControl);
-
-export default TicketControl;
+const mapStateToProps = state => {
+  return {
+    masterKombuchaList: state
+  }
+}
+KombuchaControl = connect(mapStateToProps)(KombuchaControl);
 
 export default KombuchaControl;
