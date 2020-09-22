@@ -88,7 +88,8 @@ class KombuchaControl extends React.Component {
     dispatch(action);
     this.setState({selectedKombucha: null});
   }
-  
+
+  //this has not been updated and has no test and has not been refactored with redux
   handleKombuchaPurchaseClick = (purchaseKombucha) => {
     const { dispatch } = this.props;
     const { id, name, brand, price, flavor, quanity } = purchaseKombucha;
@@ -123,7 +124,7 @@ class KombuchaControl extends React.Component {
     } else if (this.state.selectedKombucha != null) {
       currentlyVisibleState = <KombuchaDetails kombucha = {this.state.selectedKombucha} onClickingDelete = {this.handleDeletingKombucha} onClickingEdit = {this.handleEditClick} onClickingPurchase = {this.handleKombuchaPurchaseClick}/>
       buttonText ="See All Kombucha";
-    } else if (this.state.formVisibleOnPage) {
+    } else if (this.props.formVisibleOnPage) {
       currentlyVisibleState = <NewKombuchaForm onNewKombuchaCreation={this.handleAddNewKombuchaToList} />;
       buttonText = "go back";
     } else {
