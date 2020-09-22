@@ -1,16 +1,18 @@
+import * as c from './../actions/ActionTypes';
+
 export const deleteKombucha = id => ({
-  type: 'DELETE_KOMBUCHA',
+  type: c.DELETE_KOMBUCHA,
   id
 });
 
 export const toggleForm = () => ({
-  type: 'TOGGLE_FORM'
+  type: c.TOGGLE_FORM
 });
 
 export const addTicket = (ticket) => {
-  const { name, brand, price, flavor,quanity, id } = ticket;
+  const { name, brand, price, flavor, quanity, id } = ticket;
   return {
-    type: 'ADD_KOMBUCHA',
+    type: c.ADD_KOMBUCHA,
     name: name,
     brand: brand,
     price: price,
