@@ -9,8 +9,8 @@ export const toggleForm = () => ({
   type: c.TOGGLE_FORM
 });
 
-export const addTicket = (ticket) => {
-  const { name, brand, price, flavor, quanity, id } = ticket;
+export const addKombucha = (kombucha) => {
+  const { name, brand, price, flavor, quanity, id } = kombucha;
   return {
     type: c.ADD_KOMBUCHA,
     name: name,
