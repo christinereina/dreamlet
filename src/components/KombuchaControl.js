@@ -12,7 +12,6 @@ class KombuchaControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false,
       selectedKombucha: null,
       editing: false
     };
@@ -26,9 +25,6 @@ class KombuchaControl extends React.Component {
         editing: false
       });
     } else {
-      this.setState(prevState => ({
-        formVisibleOnPage: !prevState.formVisibleOnPage,
-      }));
     }
   }
 
@@ -73,7 +69,6 @@ class KombuchaControl extends React.Component {
       id: id
     }
     dispatch(action);
-    this.setState({formVisibleOnPage: false});
   }
 
   handleDeletingKombucha = (id) => {
