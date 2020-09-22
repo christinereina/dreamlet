@@ -20,11 +20,15 @@ class KombuchaControl extends React.Component {
   handleClick = () => {
     if(this.state.selectedKombucha != null) {
       this.setState({
-        formVisibleOnPage: false,
         selectedKombucha: null,
         editing: false
       });
     } else {
+      const { dispatch } = this.props;
+      const action = {
+        type: 'TOGGLE_FORM'
+      }
+      dispatch(action);
     }
   }
 
@@ -69,6 +73,10 @@ class KombuchaControl extends React.Component {
       id: id
     }
     dispatch(action);
+    const action2 = {
+      type: 'TOGGLE_FORM'
+    }
+    dispatch(action2);
   }
 
   handleDeletingKombucha = (id) => {
