@@ -22,6 +22,7 @@ describe('kombucha girl actions', () => {
       flavor: 'Honey Peach',
       quanity: 100,
       id: 1
-    });
+    }));
   });
+
 });

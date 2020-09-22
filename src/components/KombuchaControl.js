@@ -6,6 +6,7 @@ import EditKombuchaForm from './EditKombuchaForm';
 import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
+import * as a from './../actions';
 
 class KombuchaControl extends React.Component {
 
@@ -25,9 +26,7 @@ class KombuchaControl extends React.Component {
       });
     } else {
       const { dispatch } = this.props;
-      const action = {
-        type: 'TOGGLE_FORM'
-      }
+      const action = a.toggleForm();
       dispatch(action);
     }
   }
@@ -43,16 +42,7 @@ class KombuchaControl extends React.Component {
 
   handleEditingKombucha = (kombuchaToEdit) => {
     const { dispatch } = this.props;
-    const { id, name, brand, price, flavor, quanity } = kombuchaToEdit;
-    const action = {
-      type: 'ADD_KOMBUCHA',
-      name: name,
-      brand: brand,
-      price: price,
-      flavor: flavor,
-      quanity: quanity,
-      id: id
-    }
+    const action = a.addKombucha(kombuchaToEdit);
     dispatch(action);
     this.setState({
       editing: false,
@@ -60,31 +50,17 @@ class KombuchaControl extends React.Component {
     });
   }
 
-  handleAddNewKombuchaToList = (newKombucha) => {
+  handleAddNewKombuchaToList  = (newKombucha) => {
     const { dispatch } = this.props;
-    const { name, brand, price, flavor, quanity, id  } = newKombucha;
-    const action = {
-      type: 'ADD_KOMBUCHA',
-      name: name,
-      brand: brand,
-      price: price,
-      flavor: flavor,
-      quanity: quanity,
-      id: id
-    }
+    const action = a.addKombucha(newKombucha);
     dispatch(action);
-    const action2 = {
-      type: 'TOGGLE_FORM'
-    }
+    const action2 = a.toggleForm();
     dispatch(action2);
   }
-
+  
   handleDeletingKombucha = (id) => {
     const { dispatch } = this.props;
-    const action = {
-      type: 'DELETE_KOMBUCHA',
-      id: id
-    }
+    const action = a.deleteKombucha(id);
     dispatch(action);
     this.setState({selectedKombucha: null});
   }
