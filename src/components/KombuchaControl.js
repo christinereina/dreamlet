@@ -142,7 +142,8 @@ KombuchaControl.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    masterKombuchaList: state
+    masterKombuchaList: state.masterKombuchaList,
+    formVisibleOnPage: state.formVisibleOnPage
   }
 }
 KombuchaControl = connect(mapStateToProps)(KombuchaControl);
