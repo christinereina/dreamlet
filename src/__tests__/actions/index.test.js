@@ -13,4 +13,15 @@ describe('kombucha girl actions', () => {
       type: 'TOGGLE_FORM'
     });
   });
+
+  it('addKombucha should create ADD_KOMBUCHA action', () => {
+    expect(actions.addTicket({
+      name: 'The Keanu',
+      brand: 'Dr. Christine',
+      price: '$8.99',
+      flavor: 'Honey Peach',
+      quanity: 100,
+      id: 1
+    });
+  });
 });
