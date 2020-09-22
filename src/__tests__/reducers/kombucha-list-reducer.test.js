@@ -1,5 +1,5 @@
 import kombuchaListReducer from '../../reducers/kombucha-list-reducer';
-import * as c from './../actions/ActionTypes';
+import * as c from './../../actions/ActionTypes';
 
 describe('kombuchaListReducer', () => {
 
