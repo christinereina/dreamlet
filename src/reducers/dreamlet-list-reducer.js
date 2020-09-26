@@ -1,18 +1,15 @@
 export default (state = {}, action) => {
-  const { name, brand, price, flavor, quanity, id } = action;
+  const { title, description, id } = action;
   switch (action.type) {
-  case 'ADD_KOMBUCHA':
+  case 'ADD_DREAMLET':
     return Object.assign({}, state, {
       [id]: {
-        name: name,
-        brand: brand,
-        price: price,
-        flavor: flavor,
-        quanity: quanity,
+        title: title,
+        description: description,
         id: id
       }
     });
-    case 'DELETE_KOMBUCHA':
+    case 'DELETE_DREAMLET':
       const newState = { ...state };
       delete newState[id];
       return newState;

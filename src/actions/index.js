@@ -1,7 +1,7 @@
 import * as c from './../actions/ActionTypes';
 
-export const deleteKombucha = id => ({
-  type: c.DELETE_KOMBUCHA,
+export const deleteDreamlet = id => ({
+  type: c.DELETE_DREAMLET,
   id
 });
 
@@ -9,15 +9,12 @@ export const toggleForm = () => ({
   type: c.TOGGLE_FORM
 });
 
-export const addKombucha = (kombucha) => {
-  const { name, brand, price, flavor, quanity, id } = kombucha;
+export const addDreamlet = (dreamlet) => {
+  const { title, description, id } = dreamlet;
   return {
-    type: c.ADD_KOMBUCHA,
-    name: name,
-    brand: brand,
-    price: price,
-    flavor: flavor,
-    quanity: quanity,
+    type: c.ADD_DREAMLET,
+    title: title,
+    description: description,
     id: id,
   }
 }

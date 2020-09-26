@@ -15,19 +15,10 @@ function ReusableForm(props){
         <Col md={{ span: 6, offset: 3 }}>
           <Form onSubmit={props.formSubmissionHandler}>
             <Form.Group>
-              <Form.Control type='text' name='name' placeholder='Name' defaultValue={props.defaultName} />
+              <Form.Control type='text' name='title' placeholder='Title' defaultValue={props.defaultTitle} />
             </Form.Group>  
             <Form.Group>
-              <Form.Control type='text' name='brand' placeholder='Brand' defaultValue={props.defaultBrand} />
-            </Form.Group>
-            <Form.Group>  
-              <Form.Control type='text' name='price' placeholder="Price" defaultValue={props.defaultPrice}/>
-            </Form.Group>
-            <Form.Group>
-              <Form.Control type='text' name='flavor'placeholder="Flavor"   defaultValue={props.defaultFlavor}/>
-            </Form.Group>
-            <Form.Group>  
-              <Form.Control type='number'name='quantity' placeholder="quantity"   defaultValue={props.defaultQuantity}/>
+              <Form.Control type='text' name='description' placeholder='Description' defaultValue={props.defaultDescription} />
             </Form.Group>
             <Button variant='info' type='submit'>{props.buttonText}</Button>
           </Form>
@@ -41,11 +32,8 @@ function ReusableForm(props){
 ReusableForm.propTypes = {
   formSubmissionHandler: PropTypes.func,
   buttonText: PropTypes.string,
-  defaultName: PropTypes.string,
-  defaultPBrand: PropTypes.string,
-  defaultPrice: PropTypes.string,
-  defaultQuantity: PropTypes.string,
-  defaultFlavor: PropTypes.string
+  defaultTitle: PropTypes.string,
+  defaultDescription: PropTypes.string,
 };
 
 export default ReusableForm;

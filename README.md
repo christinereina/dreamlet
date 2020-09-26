@@ -1,36 +1,47 @@
-# 
-
-# <h1 align = "center"> Kombucha Girl Redux
+# <h1 align = "center"> Dreamlet
 
 <div align="center">
 
-![Preview](kb.png)
+![Preview]()
 </div>
 
-##### <h4 align = "center">  RReact with Redux, Indepedent Project for Epicodus, 09.18.2020
+##### <h4 align = "center"> Independent Capstone Project for Epicodus, 09.18.2020
 
-#### <h4 align = "center"> By _**Christine Augustine**_
+# <h2 align = "center"> Author
+
+#### <h3 align = "center"> _**Christine Augustine**_
+
+<p align="center">
+    <br>
+    <a href="https://github.com/christinereina">
+        <img src="https://avatars3.githubusercontent.com/u/59573479?s=60&v=4">
+    </a>
+    </p>
+    <p align="center">
+        <a href="https://github.com/christinereina">
+            <strong>Github | </strong>
+        </a>
+        <a href="https://www.linkedin.com/in/christineaugustine/">
+            <strong> LinkedIn | </strong>
+        </a>
+        <a href="codechristin3@gmail.com">
+            <strong> Contact </strong>
+        </a>
+</p>
 
 ---
 
 ## Description
 
-Welcome to Kombucha Girl, the world's greatest kombucha shop--now with REDUX!
-
-You are able to :
-* **Create** new Kombucha - *brand, price, flavor, price and quanity*
-* **Read** the list of available Kombucha(s)
-* **Update/Edit** the list of available Kombucha(s)
-* **Delete** Kombucha(s)
-* **Purchase** a Litre of Kombucha - site will show a counter that reflects the accurate amt of Litres available
 
 ## Setup/Installation Requirements
 
-### Start off with cloning this [repository](https://github.com/christinereina/kombucha-girl) from GitHub. Run the following commands in the terminal
+### Start off with cloning this [repository](https://github.com/christinereina/dreamlet)
+### Run the following commands in the terminal
 ```
 cd desktop
-git clone https://github.com/christinereina/kombucha-girl-redux
-cd kombucha-girl-redux
+git clone https://github.com/christinereina/dreamlet
+cd dreamlet
 npm install
 npm run start
 ```
@@ -78,12 +89,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 
 ## Known Bugs
-
-* n/a
-
-## Support and contact details
-
-* Christine Augustine
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

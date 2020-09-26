@@ -1,10 +1,10 @@
 import formVisibleReducer from './form-visible-reducer';
-import kombuchaListReducer from './kombucha-list-reducer';
+import DreamletListReducer from './dreamlet-list-reducer';
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
   formVisibleOnPage: formVisibleReducer,
-  masterKombuchaList: kombuchaListReducer
+  masterDreamletList: DreamletListReducer
 });
 
 export default rootReducer;

@@ -9,7 +9,7 @@ function Header(){
     <Container>
       <Row>
       <Col md={{ span: 6, offset: 4 }}>
-        <h1 className="header">Kombucha Girl</h1>
+        <h1 className="header">Dreamlet - where the dreams go</h1>
       </Col>  
       </Row>
     </Container>    
