@@ -18,7 +18,7 @@ function ReusableForm(props){
               <Form.Control type='text' name='title' placeholder='Title' defaultValue={props.defaultTitle} />
             </Form.Group>  
             <Form.Group>
-              <Form.Control type='text' name='description' placeholder='Description' defaultValue={props.defaultDescription} />
+              <Form.Control as="textarea" rows="7" name='description' placeholder='Description' defaultValue={props.defaultDescription} />
             </Form.Group>
             <Button variant='info' type='submit'>{props.buttonText}</Button>
           </Form>
