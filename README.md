@@ -51,6 +51,8 @@
 * User will be able to search dreams by different keywords
 * User will be able to add tags to each dream
 
+----
+
 ### Dream Database
 * Add 50 dreams that were given to me by friends to help populate my database beforehand so my app is demo-able
 
