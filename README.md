@@ -33,6 +33,27 @@
 
 ## Description
 
+**The goal of Dreamlet is to create community and connectedness through dreams.**
+
+----
+
+## MVP
+
+### CRUD functionality
+* User will be able to create a dream (title, description)
+* User will be able to see ALL dreams
+* User will be able to edit their dream 
+* User will be able to delete their dream
+
+------
+
+### Search Functionality
+* User will be able to search dreams by different keywords
+* User will be able to add tags to each dream
+
+### Dream Database
+* Add 50 dreams that were given to me by friends to help populate my database beforehand so my app is demo-able
+
 
 ## Setup/Installation Requirements
 
