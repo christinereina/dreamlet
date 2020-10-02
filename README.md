@@ -33,7 +33,9 @@
 
 ## Description
 
-[Capstone Propsoal](https://docs.google.com/document/d/1ESV5QwQxUDyZRhweLM-8HpDuF09mbcLRnCaw6bOMAEI/edit)
+[Capstone Proposal](https://docs.google.com/document/d/1ESV5QwQxUDyZRhweLM-8HpDuF09mbcLRnCaw6bOMAEI/edit)
+
+[Capstone Project Timeline](https://docs.google.com/spreadsheets/d/1mazBtwWF_1aM_DKNIwglMG0V8vPFvSBy7MQX6dy8PfU/edit#gid=1364012586)
 
 **The goal of Dreamlet is to create community and connectedness through dreams.**
 
