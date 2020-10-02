@@ -1,24 +1,31 @@
 import React from "react";
-import { v4 } from 'uuid';
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
+import { useFirestore } from 'react-redux-firebase'
+
 
 function NewDreamletForm(props){
 
-  function handleNewDreamletFormSubmission(event) {
+  const firestore = useFirestore();
+
+  function addDreamletToFirestore(event) {
     event.preventDefault();
-    props.onNewDreamletCreation({
-      title: event.target.title.value, 
-      description: event.target.description.value, 
-      id: v4()
-    });
+    
+    props.onNewDreamletCreation();
+      
+      return firestore.collection('dreamlets').add(
+        {
+          title: event.target.title.value, 
+          description: event.target.description.value
+        }
+    );
   }
 
   return (
     <React.Fragment>
       <ReusableForm
-        formSubmissionHandler={handleNewDreamletFormSubmission}
-        buttonText="add new Dreamlet"
+        formSubmissionHandler={addDreamletToFirestore}
+        buttonText="Add Dreamlet"
         />
     </React.Fragment>
   );

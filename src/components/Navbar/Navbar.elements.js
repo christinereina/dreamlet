@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { WiStars } from "react-icons/wi";
 import { Link } from 'react-router-dom';
-import { Container } from '../../globalStyles';
+import { Container } from '../globalStyles';
 
 export const Nav = styled.nav`
 

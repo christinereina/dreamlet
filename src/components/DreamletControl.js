@@ -40,22 +40,20 @@ class DreamletControl extends React.Component {
     this.setState({selectedDreamlet: selectedDreamlet});
   }
 
-  handleEditingDreamlet = (dreamletToEdit) => {
-    const { dispatch } = this.props;
-    const action = a.addDreamlet(dreamletToEdit);
-    dispatch(action);
-    this.setState({
-      editing: false,
-      selectedDreamlet: null
-    });
-  }
+  // handleEditingDreamlet = (dreamletToEdit) => {
+  //   const { dispatch } = this.props;
+  //   const action = a.addDreamlet(dreamletToEdit);
+  //   dispatch(action);
+  //   this.setState({
+  //     editing: false,
+  //     selectedDreamlet: null
+  //   });
+  // }
 
-  handleAddNewDreamletToList  = (newDreamlet) => {
+  handleAddNewDreamletToList  = () => {
     const { dispatch } = this.props;
-    const action = a.addDreamlet(newDreamlet);
+    const action = a.toggleForm();
     dispatch(action);
-    const action2 = a.toggleForm();
-    dispatch(action2);
   }
   
   handleDeletingDreamlet = (id) => {

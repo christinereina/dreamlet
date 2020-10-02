@@ -33,6 +33,8 @@
 
 ## Description
 
+[Capstone Propsoal](https://docs.google.com/document/d/1ESV5QwQxUDyZRhweLM-8HpDuF09mbcLRnCaw6bOMAEI/edit)
+
 **The goal of Dreamlet is to create community and connectedness through dreams.**
 
 “**Dreamlet**” coined by the popular author Ann Faraday, is an alternative term for dream fragment. Faraday recommends that people working with their dreams keep detailed dream diaries in which they record even apparently meaningless fragments. According to Faraday, many of these fragments eventually fit together into a pattern, if faithfully recorded night after night. She also notes that some of these dreamlets are *psychic impressions* or *precognitive dreams*.
@@ -124,6 +126,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Node.js
 * HTML & CSS
 * Bootstrap 4
+* Firebase
+* React Icons
 
 ### License
 

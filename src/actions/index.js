@@ -9,12 +9,3 @@ export const toggleForm = () => ({
   type: c.TOGGLE_FORM
 });
 
-export const addDreamlet = (dreamlet) => {
-  const { title, description, id } = dreamlet;
-  return {
-    type: c.ADD_DREAMLET,
-    title: title,
-    description: description,
-    id: id,
-  }
-}

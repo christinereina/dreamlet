@@ -1,19 +1,15 @@
+import * as c from './../actions/ActionTypes';
+
 export default (state = {}, action) => {
-  const { title, description, id } = action;
+  const { id } = action;
   switch (action.type) {
-  case 'ADD_DREAMLET':
-    return Object.assign({}, state, {
-      [id]: {
-        title: title,
-        description: description,
-        id: id
-      }
-    });
-    case 'DELETE_DREAMLET':
+
+    case c.DELETE_DREAMLET:
       const newState = { ...state };
       delete newState[id];
       return newState;
-    default:
-      return state;
-    }
-  };
+
+      default:
+        return state;
+      }
+    };
