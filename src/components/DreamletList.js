@@ -20,7 +20,7 @@ function DreamletList(props){
         <hr/>
         {dreamlets.map((dreamlet) => {
           return <Dreamlet
-            whenDreamletClicked = { props.ondreamletSelection }
+            whenDreamletClicked = { props.onDreamletSelection }
             title={dreamlet.title}
             description={dreamlet.description}
             id={dreamlet.id}
@@ -31,7 +31,7 @@ function DreamletList(props){
   } else {
     return (
       <React.Fragment>
-        <h3>Loading...</h3>
+        <h3>Dreaming...</h3>
       </React.Fragment>
     )
   }

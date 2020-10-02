@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import * as a from '../actions';
+import { withFirestore } from 'react-redux-firebase'
 
 class DreamletControl extends React.Component {
 
@@ -36,8 +37,14 @@ class DreamletControl extends React.Component {
   }
 
   handleChangingSelectedDreamlet = (id) => {
-    const selectedDreamlet = this.props.masterDreamletList[id];
-    this.setState({selectedDreamlet: selectedDreamlet});
+    this.props.firestore.get({collection: 'dreamlets', doc: id}).then((dreamlet) => {
+      const firestoreDreamlet = {
+        title: dreamlet.get("title"),
+        description: dreamlet.get("description"),
+        id: dreamlet.id
+      }
+      this.setState({selectedDreamlet: firestoreDreamlet });
+    });
   }
 
   // handleEditingDreamlet = (dreamletToEdit) => {
@@ -101,4 +108,4 @@ const mapStateToProps = state => {
 }
 DreamletControl = connect(mapStateToProps)(DreamletControl);
 
-export default DreamletControl;
+export default withFirestore(DreamletControl);
