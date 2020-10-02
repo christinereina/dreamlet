@@ -73,7 +73,7 @@ class DreamletControl extends React.Component {
       currentlyVisibleState = <EditDreamletForm dreamlet = {this.state.selectedDreamlet} onEditDreamlet = {this.handleEditingDreamletInList}/>
       buttonText ="See All Dreamlet";
     } else if (this.state.selectedDreamlet != null) {
-      currentlyVisibleState = <DreamletDetails dreamlet = {this.state.selectedDreamlet} onClickingDelete = {this.handleDeletingDreamlet} onClickingEdit = {this.handleEditClick} onClickingPurchase = {this.handleDreamletPurchaseClick}/>
+      currentlyVisibleState = <DreamletDetails dreamlet = {this.state.selectedDreamlet} onClickingDelete = {this.handleDeletingDreamlet} onClickingEdit = {this.handleEditClick} />
       buttonText ="See All Dreamlet";
     } else if (this.props.formVisibleOnPage) {
       currentlyVisibleState = <NewDreamletForm onNewDreamletCreation={this.handleAddNewDreamletToList} />;
