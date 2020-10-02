@@ -32,8 +32,10 @@ class DreamletControl extends React.Component {
     }
   }
 
-  handleEditClick = () => {
-    this.setState({editing: true});
+  handleAddNewDreamletToList  = () => {
+    const { dispatch } = this.props;
+    const action = a.toggleForm();
+    dispatch(action);
   }
 
   handleChangingSelectedDreamlet = (id) => {
@@ -47,26 +49,19 @@ class DreamletControl extends React.Component {
     });
   }
 
-  // handleEditingDreamlet = (dreamletToEdit) => {
-  //   const { dispatch } = this.props;
-  //   const action = a.addDreamlet(dreamletToEdit);
-  //   dispatch(action);
-  //   this.setState({
-  //     editing: false,
-  //     selectedDreamlet: null
-  //   });
-  // }
+  handleEditClick = () => {
+    this.setState({editing: true});
+  }
 
-  handleAddNewDreamletToList  = () => {
-    const { dispatch } = this.props;
-    const action = a.toggleForm();
-    dispatch(action);
+  handleEditingDreamletInList = (dreamletToEdit) => {
+    this.setState({
+      editing: false,
+      selectedDreamlet: null
+    });
   }
   
   handleDeletingDreamlet = (id) => {
-    const { dispatch } = this.props;
-    const action = a.deleteDreamlet(id);
-    dispatch(action);
+    this.props.firestore.delete({collection: 'dreamlets', doc: id});
     this.setState({selectedDreamlet: null});
   }
 
@@ -75,7 +70,7 @@ class DreamletControl extends React.Component {
     let buttonText = null;
 
     if(this.state.editing ) {
-      currentlyVisibleState = <EditDreamletForm dreamlet = {this.state.selectedDreamlet} onEditDreamlet = {this.handleEditingDreamlet}/>
+      currentlyVisibleState = <EditDreamletForm dreamlet = {this.state.selectedDreamlet} onEditDreamlet = {this.handleEditingDreamletInList}/>
       buttonText ="See All Dreamlet";
     } else if (this.state.selectedDreamlet != null) {
       currentlyVisibleState = <DreamletDetails dreamlet = {this.state.selectedDreamlet} onClickingDelete = {this.handleDeletingDreamlet} onClickingEdit = {this.handleEditClick} onClickingPurchase = {this.handleDreamletPurchaseClick}/>
@@ -97,15 +92,16 @@ class DreamletControl extends React.Component {
 }
 
 DreamletControl.propTypes = {
-  masterDreamletList: PropTypes.object
+  DreamletList: PropTypes.object
 };
 
 const mapStateToProps = state => {
   return {
-    masterDreamletList: state.masterDreamletList,
+    DreamletList: state.DreamletList,
     formVisibleOnPage: state.formVisibleOnPage
   }
 }
+
 DreamletControl = connect(mapStateToProps)(DreamletControl);
 
 export default withFirestore(DreamletControl);

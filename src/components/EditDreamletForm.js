@@ -1,32 +1,37 @@
 import React from "react";
-import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
+import PropTypes from "prop-types";
+import { useFirestore } from 'react-redux-firebase';
 
-function EditDreamletForm(props){
-  const { dreamlet, onEditDreamlet } = props;
+function EditDreamletForm (props) {
+  const { dreamlet } = props;
+  const firestore = useFirestore();
 
   function handleEditDreamletFormSubmission(event) {
-    onEditDreamlet({
-      title: event.target.title.value, 
-      description: event.target.description.value, 
-      id: dreamlet.id
-    });
+    event.preventDefault();
+    props.onEditDreamlet();
+    const propertiesToUpdate = {
+      title: event.target.title.value,
+      description: event.target.description.value
+    }
+    return firestore.update({collection: 'dreamlets', doc: dreamlet.id }, propertiesToUpdate)
   }
 
   return (
     <React.Fragment>
-      <ReusableForm
-          formSubmissionHandler={handleEditDreamletFormSubmission}
-          buttonText='Update Dreamlet'
-          defaultTitle={dreamlet.title}
-          defaultDescription={dreamlet.description} />
-  </React.Fragment>
+      <ReusableForm 
+        formSubmissionHandler={handleEditDreamletFormSubmission}
+        buttonText="Update Dreamlet" 
+        defaultTitle={dreamlet.title}
+        defaultDescription={dreamlet.description} />
+    </React.Fragment>
   );
 }
 
 EditDreamletForm.propTypes = {
-  dreamlet: PropTypes.object,
-  onEditDreamlet: PropTypes.func
+  onEditDreamlet: PropTypes.func,
+  defaultTitle: PropTypes.string,
+  defaultDescription: PropTypes.string
 };
 
 export default EditDreamletForm;
