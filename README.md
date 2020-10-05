@@ -50,7 +50,7 @@
 * User will be able to see ALL dreams
 * User will be able to edit their dream 
 * User will be able to delete their dream
-
+- **Completed w/ firebase 10/5**
 ------
 
 ### Search Functionality
@@ -61,6 +61,12 @@
 
 ### Dream Database
 * Add 50 dreams that were given to me by friends to help populate my database beforehand so my app is demo-able
+
+## Stretch Goals
+
+* Comments on Dreamlets
+* User Sign-in / Authentication
+* Common Dream Themes Page
 
 
 ## Setup/Installation Requirements
@@ -118,6 +124,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 
 ## Known Bugs
+
+n/a
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
