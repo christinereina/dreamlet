@@ -1,10 +1,10 @@
 import React from 'react';
 import GlobalStyle from './globalStyles';
-import Header from './Header';
 import DreamletControl from './DreamletControl';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '././Navbar/Navbar';
+import InfoSection from '././InfoSection/InfoSection';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App(){
@@ -12,7 +12,7 @@ function App(){
     <Router>
       <GlobalStyle />
       <Navbar />
-      <Header />
+      <InfoSection />
       <Switch>
         <Route path="/signin">
           {/* <Signin /> */}
