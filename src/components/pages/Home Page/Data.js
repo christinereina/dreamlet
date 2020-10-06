@@ -6,8 +6,11 @@ export const homeObjOne = {
   lightTopLine: true,
   lightTextDesc: true,
   buttonLabel: 'Start with Dreamlet',
-  description: 'The goal of Dreamlet is to create community and connectedness through dreams',
+  description: 'The goal of Dreamlet is to create community and connectedness through dreams.',
   headline: 'Ever wonder what others are dreaming about...',
   lightText: true,
-  topLine: 'Dreamlet App'
+  topLine: 'Dreamlet',
+  img: '',
+  alt: 'Image',
+  start: ''
 };
