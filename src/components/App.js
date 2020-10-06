@@ -4,6 +4,7 @@ import DreamletControl from './DreamletControl';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '././Navbar/Navbar';
+import Footer from './Footer/Footer';
 import Home from './pages/Home Page/Home';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -16,6 +17,7 @@ function App(){
         <Route path="/" exact component={Home} />
           <DreamletControl />
       </Switch>
+      <Footer />
     </Router>
   );
 }
