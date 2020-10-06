@@ -10,7 +10,7 @@ export const homeObjOne = {
   headline: 'Ever wonder what others are dreaming about...',
   lightText: true,
   topLine: 'Dreamlet',
-  img: '',
+  img: require('../../Images/homepage.png'),
   alt: 'Image',
   start: ''
 };
