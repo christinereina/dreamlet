@@ -13,23 +13,28 @@ font-size: 1.2rem;
 position: sticky;
 top: 0;
 z-index: 999;
+text-decoration: none;
 `;
 
 export const NavbarContainer = styled(Container)`
 display: flex;
 justify-content: space-between;
 height: 80px;
+text-decoration: none;
 ${Container}
 `;
 
 export const NavLogo = styled(Link)`
+text-decoration: none;
 color: #fff;
 justify-self: flex-start;
 cursor: pointer;
-text-decoration: none;
 font-size: 2em;
 display: flex;
 align-items: center;
+
+&:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
 `;
 
 export const NavIcon = styled(WiStars)`
@@ -54,6 +59,7 @@ display: flex;
 align-items: center;
 list-style: none;
 text-align: center;
+text-decoration: none;
 @media screen and (max-width: 960px) {
   display:flex;
   flex-direction: column;
@@ -65,25 +71,30 @@ text-align: center;
   opacity: 1;
   transition: all 0.5s ease;
   background: #101522;
+
+  &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
 }
-`;
+}
+`
 
 export const NavItem = styled.li`
 height: 80px;
 border-bottom: 2px solid transparent;
 
-&:hover {
-  border-bottom: 2px solid #4b59f7;
+  &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;  
 }
 
 @media screen and (max-width: 960px) {
   width: 100%;
   &:hover {
     border: none;
+    text-decoration: none;  
   }
+};
 }
 `
-
 export const NavLinks = styled(Link)`
 color: #fff;
 display: flex;
@@ -96,9 +107,11 @@ height: 100%;
   padding: 2rem;
   width: 100%;
   display: table;
+  
   &:hover {
     color: #4b59f7;
     transition: all 0.3s ease;
+    text-decoration: none;
   }
 }
 `;
@@ -110,6 +123,7 @@ export const NavItemBtn = styled.li`
   align-items: center;
   width: 100%;
   height: 120px;
+  text-decoration: none;
 }
 `
 
@@ -122,4 +136,8 @@ padding: 8px 16px;
 width: 100%;
 border: none;
 outline: none;
+
+&:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+}
 `
