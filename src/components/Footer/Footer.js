@@ -50,6 +50,11 @@ const footer = () => {
           </FooterLinksItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>
+      {/* <SocialMedia>
+        <SocialMediaWrap>
+          
+        </SocialMediaWrap>
+      </SocialMedia> */}
     </FooterContainer>
   )
 }
