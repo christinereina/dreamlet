@@ -10,12 +10,13 @@ const Navbar = () => {
   const [button, setButton] = useState(true)
 
   const handleClicker = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
     if(window.innerWidth <= 960) {
-      setButton(false)
+      setButton(false);
     } else {
-      setButton(true)
+      setButton(true);
     }
   }
 
@@ -29,7 +30,7 @@ const Navbar = () => {
     <IconContext.Provider value={{ color: '#fff' }}>
       <Nav>
         <NavbarContainer>
-          <NavLogo to='/'>
+          <NavLogo to='/' onClick={closeMobileMenu} click={click}>
             <NavIcon />
             Dreamlet
             </NavLogo>
@@ -40,7 +41,6 @@ const Navbar = () => {
             <NavItem>
               <NavLinks to='/Dreamlets'>Dreams</NavLinks>
             </NavItem>
-        
             <NavItem>
               <NavLinks to='/Themes'>Common Themes</NavLinks>
             </NavItem>
