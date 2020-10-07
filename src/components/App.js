@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '././Navbar/Navbar';
 import Footer from './Footer/Footer';
 import Home from './pages/Home Page/Home';
+import Themes from './pages/Themes Page/Themes';
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App(){
@@ -15,6 +17,7 @@ function App(){
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/Themes" exact component={Themes} />
           <DreamletControl />
       </Switch>
       <Footer />

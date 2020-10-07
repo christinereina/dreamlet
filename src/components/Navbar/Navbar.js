@@ -38,11 +38,11 @@ const Navbar = () => {
           </MobileIcon>
           <NavMenu onClick={handleClicker} click={click}>
             <NavItem>
-              <NavLinks to='/'>Dreams</NavLinks>
+              <NavLinks to='/Dreamlets'>Dreams</NavLinks>
             </NavItem>
         
             <NavItem>
-              <NavLinks to='/'>Common Themes</NavLinks>
+              <NavLinks to='/Themes'>Common Themes</NavLinks>
             </NavItem>
             <NavItemBtn>
               {button ? (
