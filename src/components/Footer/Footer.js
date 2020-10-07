@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterContainer, Footer, FooterSubHeading, FooterSubText, Form, FormInput } from './Footer.elements';
+import { FooterContainer, Footer, FooterSubHeading, FooterSubText, Form, FormInput, FooterLinksContainer, FooterLinksWrapper, FooterLinksItems, FooterLinkTitle, FooterLink } from './Footer.elements';
 import { Button } from '../globalStyles';
 
 
@@ -18,7 +18,38 @@ const footer = () => {
           </Form>
         </FooterSubHeading>
       </Footer>
-      
+      <FooterLinksContainer>
+        <FooterLinksWrapper>
+          <FooterLinksItems>
+            <FooterLinkTitle> About Us </FooterLinkTitle>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> Terms of Service</FooterLink>
+          </FooterLinksItems>
+          <FooterLinksItems>
+            <FooterLinkTitle> About Us </FooterLinkTitle>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> Terms of Service</FooterLink>
+          </FooterLinksItems>
+          <FooterLinksItems>
+            <FooterLinkTitle> Contact Us </FooterLinkTitle>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> Terms of Service</FooterLink>
+          </FooterLinksItems>
+          <FooterLinksItems>
+            <FooterLinkTitle> Social Media </FooterLinkTitle>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> How it Works</FooterLink>
+            <FooterLink to='sign-up'> Terms of Service</FooterLink>
+          </FooterLinksItems>
+        </FooterLinksWrapper>
+      </FooterLinksContainer>
     </FooterContainer>
   )
 }
