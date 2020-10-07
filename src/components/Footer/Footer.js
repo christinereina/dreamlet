@@ -1,5 +1,7 @@
 import React from 'react'
-import { FooterContainer, Footer, FooterSubHeading, FooterSubText } from './Footer.elements';
+import { FooterContainer, Footer, FooterSubHeading, FooterSubText, Form, FormInput } from './Footer.elements';
+import { Button } from '../globalStyles';
+
 
 const footer = () => {
   return (
@@ -10,6 +12,10 @@ const footer = () => {
           <FooterSubText>
             You can find the creator here:
           </FooterSubText>
+          <Form>
+            <FormInput name="email" type="email" placeholder="Your Email" />
+              <Button fontBig>Notify Me</Button>
+          </Form>
         </FooterSubHeading>
       </Footer>
       
