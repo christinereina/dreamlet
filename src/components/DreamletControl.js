@@ -77,9 +77,7 @@ class DreamletControl extends React.Component {
     }
     if ((isLoaded(auth)) && (auth.currentUser == null)) {
       return (
-        <React.Fragment>
-          <h1>You must be signed in to access the queue.</h1>
-        </React.Fragment>
+        window.location = '/Signin'
       )
     } 
     if ((isLoaded(auth)) && (auth.currentUser != null)) {

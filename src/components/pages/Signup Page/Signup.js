@@ -1,5 +1,7 @@
 import React from "react";
 import firebase from "firebase/app";
+import { Button } from '../../globalStyles';
+import { Link } from 'react-router-dom';
 
 
 function Signup(){ 
@@ -47,7 +49,9 @@ function Signup(){
         <button type='submit'>Sign up</button>
       </form>
 
-      <button onClick={doSignIn}>Sign in</button>  
+      <Link to='/Signin'>  
+         <Button> Login</Button>
+      </Link>
 
 
   </React.Fragment>
