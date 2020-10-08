@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { Container } from '../globalStyles';
 
 export const Nav = styled.nav`
-background: #101522;
+background: #B5DDC2;
+/* background: #B5DDC2; */
 height: 80px;
 display: flex;
 justify-content: center;
@@ -29,7 +30,7 @@ text-decoration: none;
 color: #fff;
 justify-self: flex-start;
 cursor: pointer;
-font-size: 2em;
+font-size: 1.5em;
 display: flex;
 align-items: center;
 
@@ -70,11 +71,11 @@ text-decoration: none;
   left: ${({click}) => (click ? 0 : '-100%')};
   opacity: 1;
   transition: all 0.5s ease;
-  background: #101522;
+  background: #B5DDC2;
 
   &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
-}
+  }
 }
 `
 
@@ -96,7 +97,7 @@ border-bottom: 2px solid transparent;
 }
 `
 export const NavLinks = styled(Link)`
-color: #fff;
+color: #5E5E5E;
 display: flex;
 align-items: center;
 text-decoration: none;
@@ -108,10 +109,8 @@ height: 100%;
   width: 100%;
   display: table;
   
-  &:hover {
-    color: #4b59f7;
-    transition: all 0.3s ease;
-    text-decoration: none;
+  &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
   }
 }
 `;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.div`
-background-color: #101522;
+background-color: #B5DDC2;
 padding: 4rem 0 2rem 0;
 display: flex;
 flex-direction: column;
