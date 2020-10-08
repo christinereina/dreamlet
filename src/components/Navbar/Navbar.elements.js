@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { Container } from '../globalStyles';
 
 export const Nav = styled.nav`
-background: #B5DDC2;
-/* background: #B5DDC2; */
+background: #00C5A0;
+/* background: #00C5A0; */
 height: 80px;
 display: flex;
 justify-content: center;
@@ -71,7 +71,7 @@ text-decoration: none;
   left: ${({click}) => (click ? 0 : '-100%')};
   opacity: 1;
   transition: all 0.5s ease;
-  background: #B5DDC2;
+  background: #00C5A0;
 
   &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;

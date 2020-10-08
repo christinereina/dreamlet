@@ -10,11 +10,7 @@ right: 0;
 top: 0;
 z-index: 0;
 overflow: hidden;
-background: linear-gradient(
-  108deg,
-  rgba(1, 147, 86, 1) 0%,
-  rgba(10,201, 122, 1) 100%
-);
+background: #FDFDF2;
 `;
 
 export const FormWrap = styled.div`
@@ -53,7 +49,7 @@ justify-content: center;
 `;
 
 export const Form = styled.form`
-background: #010101;
+background: #FAA16D;
 max-width: 400px;
 height: auto;
 width: 100%;
