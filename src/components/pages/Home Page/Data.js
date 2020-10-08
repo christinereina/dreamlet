@@ -25,7 +25,7 @@ export const homeObjTwo = {
   headline: 'Flying, Finding Money, Faulty machinery',
   lightText: true,
   topLine: 'Are you Curious?',
-  img: require('../../Images/scene.png'),
+  img: require('../../Images/theme.png'),
   alt: 'Image',
   start: 'true'
 };
@@ -41,7 +41,7 @@ export const homeObjThree = {
   headline: 'Why Dreamlet?',
   lightText: false,
   topLine: 'Do dreams have a deeper meaning?',
-  img: require('../../Images/homepage.png'),
+  img: require('../../Images/about.png'),
   alt: 'Image',
   start: ''
 };
