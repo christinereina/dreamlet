@@ -9,6 +9,7 @@ import Home from './pages/Home Page/Home';
 import Themes from './pages/Themes Page/Themes';
 import About from './pages/About Page/About';
 import Signin from "./pages/Signin Page/Signin";
+import Signup from "./pages/Signup Page/Signup";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App(){
@@ -20,7 +21,9 @@ function App(){
         <Route path="/" exact component={Home} />
         <Route path="/Themes" exact component={Themes} />
         <Route path="/About" exact component={About} />
+        <Route path="/Signup" exact component={Signup} />
         <Route path="/Signin" exact component={Signin} />
+        <DreamletControl />
       </Switch>
       <Footer />
     </Router>

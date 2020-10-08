@@ -2,7 +2,7 @@ import React from "react";
 import firebase from "firebase/app";
 
 
-function Signin(){ 
+function Signup(){ 
   function doSignUp(event) {
     event.preventDefault();
     const email = event.target.email.value;
@@ -32,25 +32,26 @@ function Signin(){
         });  
   } 
 
-
   return (
     <React.Fragment>
-      <h1>Sign In</h1>
-      <form onSubmit={doSignIn}>
+      <h1>Sign up</h1>
+      <form onSubmit={doSignUp}>
         <input
           type='text'
-          name='signinEmail'
+          name='email'
           placeholder='email' />
         <input
           type='password'
-          name='signinPassword'
+          name='password'
           placeholder='Password' />
-        <button type='submit'>Sign in</button>
+        <button type='submit'>Sign up</button>
       </form>
-      <h1>Sign Out</h1>
-      <button onClick={doSignOut}>Sign out</button>  
+
+      <button onClick={doSignIn}>Sign in</button>  
+
+
   </React.Fragment>
 )
   }
 
-export default Signin;
+export default Signup;
