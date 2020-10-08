@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Preview]()
+![Preview](src/components/Images/homepage_preview.png)
 </div>
 
 ##### <h4 align = "center"> Independent Capstone Project for Epicodus, 09.18.2020
@@ -131,12 +131,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 * React
 * Javascript
+* Firebase
 * Webpack
 * Node.js
-* HTML & CSS
-* Bootstrap 4
-* Firebase
+* Styled Components
 * React Icons
+* Bootstrap 4
 
 ### License
 
