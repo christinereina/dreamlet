@@ -1,6 +1,7 @@
 import React from "react";
 import firebase from "firebase/app";
 import { Link } from 'react-router-dom';
+import SignIn from '../Signin Page';
 
 function Signin(){ 
   function doSignUp(event) {
@@ -32,24 +33,34 @@ function Signin(){
         });  
   } 
 
-
+const Signin = () => {
   return (
-    <React.Fragment>
-      <h1>Sign In</h1>
-      <form onSubmit={doSignIn}>
-        <input
-          type='text'
-          name='signinEmail'
-          placeholder='email' />
-        <input
-          type='password'
-          name='signinPassword'
-          placeholder='Password' />
-        <button type='submit'>Sign in</button>
-      </form>
-
-  </React.Fragment>
-)
-  }
+    <>
+      <SignIn />
+    </>
+  )
+}
 
 export default Signin;
+
+
+//   return (
+//     <React.Fragment>
+//       <h1>Sign In</h1>
+//       <form onSubmit={doSignIn}>
+//         <input
+//           type='text'
+//           name='signinEmail'
+//           placeholder='email' />
+//         <input
+//           type='password'
+//           name='signinPassword'
+//           placeholder='Password' />
+//         <button type='submit'>Sign in</button>
+//       </form>
+
+//   </React.Fragment>
+// )
+//   }
+
+// export default Signin;
