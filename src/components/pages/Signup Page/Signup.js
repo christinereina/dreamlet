@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from 'react';
 import firebase from "firebase/app";
 import { Button } from '../../globalStyles';
 import { Link } from 'react-router-dom';
-
+import { withRouter } from 'react-router-dom';
 
 function Signup(){ 
   function doSignUp(event) {
@@ -58,4 +58,4 @@ function Signup(){
 )
   }
 
-export default Signup;
+export default withRouter(Signup);
