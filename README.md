@@ -136,7 +136,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Node.js
 * Styled Components
 * React Icons
+* [Blush](https://blush.design/) for illustrations
 * Bootstrap 4
+
+### Special Thanks
+Thank you to all who contributed their dreams to me by email, text and FaceTime. 
+
+Also, sorry to those whose dreams couldn't be added due to the graphic nature! 
+
+*Keep Dreaming!*
 
 ### License
 
