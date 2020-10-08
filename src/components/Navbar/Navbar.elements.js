@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { WiStars } from "react-icons/wi";
+import { FaCloudMoon } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { Container } from '../globalStyles';
 
 export const Nav = styled.nav`
 background: #00C5A0;
-/* background: #00C5A0; */
 height: 80px;
 display: flex;
 justify-content: center;
@@ -38,7 +37,7 @@ align-items: center;
         text-decoration: none;
 `;
 
-export const NavIcon = styled(WiStars)`
+export const NavIcon = styled(FaCloudMoon)`
 margin-right: 0.5rem;
 `;
 

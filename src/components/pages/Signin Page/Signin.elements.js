@@ -87,7 +87,7 @@ export const FormLabel = styled.label`
  `;
 
  export const FormButton = styled.button`
-  background: #01bf71;
+  background: #7FD1AE;
   padding: 16px 0;
   border: none;
   border-radius: 4px;

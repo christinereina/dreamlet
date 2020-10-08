@@ -25,7 +25,7 @@ export const homeObjTwo = {
   headline: 'Everybody Dreams',
   lightText: true,
   topLine: 'You always dream—you just don’t remember it',
-  img: require('../../Images/scene.png'),
+  img: require('../../Images/about.png'),
   alt: 'Image',
   start: 'true'
 };
