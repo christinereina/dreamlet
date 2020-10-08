@@ -8,7 +8,7 @@ import Footer from './Footer/Footer';
 import Home from './pages/Home Page/Home';
 import Themes from './pages/Themes Page/Themes';
 import About from './pages/About Page/About';
-import Signin from "./Signin";
+import Signin from "./pages/Signin Page/Signin";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App(){
@@ -20,12 +20,7 @@ function App(){
         <Route path="/" exact component={Home} />
         <Route path="/Themes" exact component={Themes} />
         <Route path="/About" exact component={About} />
-        <Route path="/signin">
-          <Signin />
-        </Route>
-        <Route path="/">
-          <DreamletControl />
-          </Route>
+        <Route path="/Signin" exact component={Signin} />
       </Switch>
       <Footer />
     </Router>
