@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
-import { useFirestore } from 'react-redux-firebase'
-
+import { useFirestore } from 'react-redux-firebase';
+// import Container from 'react-bootstrap/Container';
+import { Container } from './globalStyles';
 
 function NewDreamletForm(props){
 
@@ -23,10 +24,12 @@ function NewDreamletForm(props){
 
   return (
     <React.Fragment>
+      <Container>
       <ReusableForm
         formSubmissionHandler={addDreamletToFirestore}
         buttonText="Add Dreamlet"
         />
+        </Container>
     </React.Fragment>
   );
 }

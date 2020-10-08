@@ -4,6 +4,7 @@ import DreamletList from './DreamletList';
 import DreamletDetails from './DreamletDetails';
 import EditDreamletForm from './EditDreamletForm';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import * as a from '../actions';
@@ -99,8 +100,10 @@ class DreamletControl extends React.Component {
     }
     return (
       <React.Fragment>
+        <Container>
         {currentlyVisibleState}
         <Button variant='info' onClick={this.handleClick}>{buttonText}</Button>
+        </Container>
       </React.Fragment>
     );
   }

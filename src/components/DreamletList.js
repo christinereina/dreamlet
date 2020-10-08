@@ -17,6 +17,7 @@ function DreamletList(props){
   if (isLoaded(dreamlets)) {
     return (
       <React.Fragment>
+        <Container>
         <hr/>
         {dreamlets.map((dreamlet) => {
           return <Dreamlet
@@ -26,6 +27,7 @@ function DreamletList(props){
             id={dreamlet.id}
             key={dreamlet.id}/>
         })}
+        </Container>
       </React.Fragment>
     );
   } else {
