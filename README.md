@@ -1,35 +1,14 @@
 # <h1 align = "center"> Dreamlet
 
-<div align="center">
-
-![Preview](src/components/Images/homepage_preview.png)
-</div>
-
 ##### <h4 align = "center"> Independent Capstone Project for Epicodus, 09.18.2020
 
-# <h2 align = "center"> Author
-
-#### <h3 align = "center"> _**Christine Augustine**_
-
-<p align="center">
-    <br>
-    <a href="https://github.com/christinereina">
-        <img src="https://avatars3.githubusercontent.com/u/59573479?s=60&v=4">
-    </a>
-    </p>
-    <p align="center">
-        <a href="https://github.com/christinereina">
-            <strong>Github | </strong>
-        </a>
-        <a href="https://www.linkedin.com/in/christineaugustine/">
-            <strong> LinkedIn | </strong>
-        </a>
-        <a href="codechristin3@gmail.com">
-            <strong> Contact </strong>
-        </a>
-</p>
-
 ---
+
+<div align="center">
+
+![Web Preview](src/components/Images/homepage_preview.png)
+![Mobile Preview](src/components/Images/moblieside_preview.jpeg)
+</div>
 
 ## Description
 
@@ -124,7 +103,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Known Bugs
 
-n/a
+Yes - needs update
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -145,6 +124,32 @@ Thank you to all who contributed their dreams to me by email, text and FaceTime.
 Also, sorry to those whose dreams couldn't be added due to the graphic nature! 
 
 *Keep Dreaming!*
+
+
+
+# <h2 align = "center"> Author
+
+#### <h3 align = "center"> _**Christine Augustine**_
+
+<p align="center">
+    <br>
+    <a href="https://github.com/christinereina">
+        <img src="https://avatars3.githubusercontent.com/u/59573479?s=60&v=4">
+    </a>
+    </p>
+    <p align="center">
+        <a href="https://github.com/christinereina">
+            <strong>Github | </strong>
+        </a>
+        <a href="https://www.linkedin.com/in/christineaugustine/">
+            <strong> LinkedIn | </strong>
+        </a>
+        <a href="codechristin3@gmail.com">
+            <strong> Contact </strong>
+        </a>
+</p>
+
+----
 
 ### License
 
