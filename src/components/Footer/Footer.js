@@ -8,9 +8,9 @@ const footer = () => {
     <FooterContainer>
       <Footer>
         <FooterSubHeading>
-          Learn more about Dreamlet
+         Dreamlet
           <FooterSubText>
-            You can find the creator here:
+            Join our Newsletter
           </FooterSubText>
           <Form>
             <FormInput name="email" type="email" placeholder="Your Email" />
@@ -23,30 +23,18 @@ const footer = () => {
           <FooterLinksItems>
             <FooterLinkTitle> About Us </FooterLinkTitle>
             <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> Terms of Service</FooterLink>
-          </FooterLinksItems>
-          <FooterLinksItems>
-            <FooterLinkTitle> About Us </FooterLinkTitle>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
             <FooterLink to='sign-up'> Terms of Service</FooterLink>
           </FooterLinksItems>
           <FooterLinksItems>
             <FooterLinkTitle> Contact Us </FooterLinkTitle>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> Terms of Service</FooterLink>
+            <FooterLink to='sign-up'> LinkedIn</FooterLink>
+            <FooterLink to='sign-up'> GitHub</FooterLink>
+            <FooterLink to='sign-up'> Email</FooterLink>
           </FooterLinksItems>
           <FooterLinksItems>
             <FooterLinkTitle> Social Media </FooterLinkTitle>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> How it Works</FooterLink>
-            <FooterLink to='sign-up'> Terms of Service</FooterLink>
+            <FooterLink to='sign-up'> Instagram </FooterLink>
+            <FooterLink to='sign-up'> Tik Tok </FooterLink>
           </FooterLinksItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>

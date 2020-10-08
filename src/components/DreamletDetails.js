@@ -14,10 +14,10 @@ function DreamletDetails(props){
       <Container>
         <Row>
       <Col md={8}>
-      <h2>{dreamlet.title} Details</h2>
-      <h2>{dreamlet.description}</h2>
-      <Button onClick={ props.onClickingEdit }>Edit</Button>
-      <Button onClick={() => onClickingDelete(dreamlet.id)}>Delete</Button>
+      <h2>{dreamlet.title}</h2>
+      <h4>{dreamlet.description}</h4>
+      {/* <Button onClick={ props.onClickingEdit }>Edit</Button>
+      <Button onClick={() => onClickingDelete(dreamlet.id)}>Delete</Button> */}
       <hr/>
       </Col>  
       </Row>
